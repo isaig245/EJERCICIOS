@@ -1,0 +1,97 @@
+
+//js 
+
+let productos = ["azúcar", "arroz", "sal", "aceite"];
+
+for (let i = 0; i < productos.length; i++) {
+    console.log(productos[i]);
+
+    if (i === 2) {
+        console.log("¡Llegamos al índice 2!");
+        break; // Detiene el ciclo
+    }
+}
+
+
+//php
+
+<?php
+$productos = ["azúcar", "arroz", "sal", "aceite"];
+
+for ($i = 0; $i < count($productos); $i++) {
+    echo $productos[$i] . "<br>";
+
+    if ($i == 2) {
+        echo "¡Llegamos al índice 2!<br>";
+        break; // Detiene el ciclo
+    }
+}
+?>
+
+
+//impresion array simple php
+
+$frutas = array("manzana", "banana", "naranja"); // o ["manzana", "banana", "naranja"]
+
+echo $frutas[0]; // "manzana"
+echo $frutas[2]; // "naranja"
+
+//agregar datos array js 
+// en algunos no cuenta con los areglos 
+
+//Agrega al final 
+let frutas = ["manzana", "banana"];
+frutas.push("naranja"); 
+console.log(frutas); // ["manzana", "banana", "naranja"]
+
+//Agrega al inicio 
+frutas.unshift("pera");
+console.log(frutas); // ["pera", "manzana", "banana", "naranja"]
+
+//let frutas = ["manzana", "banana"];
+let nuevaFruta = prompt("Ingresa una fruta:"); // El usuario escribe, ej: "naranja"
+frutas.push(nuevaFruta);
+console.log(frutas); // ["manzana", "banana", "naranja"]
+
+//agregar datos por el usuario 
+let frutas = ["manzana", "banana"];
+let nuevaFruta = prompt("Ingresa una fruta:"); // El usuario escribe, ej: "naranja"
+frutas.push(nuevaFruta);
+console.log(frutas); // ["manzana", "banana", "naranja"]
+
+
+//agregar con php 
+$frutas = ["manzana", "banana"];
+array_push($frutas, "naranja", "pera");
+print_r($frutas); // ["manzana", "banana", "naranja", "pera"]
+
+<?php
+// Array inicial
+$frutas = ["manzana", "banana"];
+// Pedir al usuario una nueva fruta (solo funciona en consola)
+echo "Ingresa una fruta para agregar al array: ";
+$nuevaFruta = trim(readline());
+ // Lee la entrada del usuario
+array_push($frutas, $nuevaFruta);
+print_r($frutas);
+?>
+
+//eliminar elementos js
+
+let ultimaFruta = frutas.pop();
+console.log(ultimaFruta); // "naranja"
+console.log(frutas); // ["pera", "manzana", "banana"]
+
+let primeraFruta = frutas.shift();
+console.log(primeraFruta); // "pera"
+console.log(frutas); // ["manzana", "banana"]
+
+//eliminar elementos php
+
+$ultimaFruta = array_pop($frutas);
+echo $ultimaFruta; // "uva"
+print_r($frutas); // ["manzana", "banana", "naranja", "pera"]
+
+$primeraFruta = array_shift($frutas);
+echo $primeraFruta; // "manzana"
+print_r($frutas); // ["banana", "naranja", "pera"]
