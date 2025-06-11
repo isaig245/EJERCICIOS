@@ -1,0 +1,13 @@
+let compañeros = ["Alan", "Joshua", "Gerardo", "Luis", "Jose", "Axel"];
+
+console.log(`${compañeros[0]} y ${compañeros[2]}`); // imprimir a dos datos 
+
+///// imprimir todos en un ciclo 
+//recuerden que a veces omito ya los arreglos o declaracion de variables iniciales, si lo copian asi como esta no funcionara 
+for (let i = 0; i < nombres2.length; i++) {
+    console.log(nombres2[i]);
+}
+// O usando for...of
+for (let nombre of nombres2) {
+    console.log(nombre);
+}
