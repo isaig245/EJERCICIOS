@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void comparar_dos_letras() {
+    char letra1 = 'A';
+    char letra2 = 'B';
+
+    printf("--- Comparación de dos Letras ---\n");
+    printf("El valor ASCII de '%c' es %d\n", letra1, letra1);
+    printf("El valor ASCII de '%c' es %d\n", letra2, letra2);
+
+    // La comparación se hace directamente sobre sus valores ASCII
+    if (letra1 < letra2) {
+        printf("Resultado: '%c' va PRIMERO que '%c' (es menor).\n", letra1, letra2);
+    } else if (letra1 > letra2) {
+        printf("Resultado: '%c' va DESPUÉS de '%c' (es mayor).\n", letra1, letra2);
+    } else {
+        printf("Resultado: Ambas letras son iguales.\n");
+    }
+}
+// Puedes llamar a esta función en main().
