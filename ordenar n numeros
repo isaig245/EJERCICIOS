@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void ejercicio2_ordenar_dos_numeros() {
+    int A, B;
+
+    printf("\n--- Ejercicio 2: Ordenar dos Números ---\n");
+    printf("Ingresa el primer número (A): ");
+    scanf("%d", &A);
+    printf("Ingresa el segundo número (B): ");
+    scanf("%d", &B);
+
+    // 1. Comparación para ordenar de Mayor a Menor (Descendente)
+    // Si A es menor que B, están en el orden incorrecto
+    if (A < B) {
+        // 2. Aplicar el intercambio (swap)
+        swap(&A, &B); 
+        // Nota: Pasamos las direcciones (&) para que la función modifique los valores originales.
+    }
+
+    printf("\nNúmeros ordenados (Mayor a Menor): %d, %d\n", A, B);
+}
+
+
+ int main() { ejercicio2_ordenar_dos_numeros(); return 0; }
