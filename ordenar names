@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h> // Para usar la función strcmp
+
+void ejercicio3_ordenar_dos_nombres() {
+    char nombre1[50], nombre2[50];
+    int resultado_comparacion;
+
+    printf("\n--- Ejercicio 3: Ordenar dos Nombres ---\n");
+    printf("Ingresa el primer nombre: ");
+    scanf("%s", nombre1); // Usamos scanf simple para este ejemplo
+    printf("Ingresa el segundo nombre: ");
+    scanf("%s", nombre2);
+
+    // 1. Comparación de cadenas usando strcmp:
+    // Retorna:
+    // < 0 si nombre1 es lexicográficamente menor (va primero)
+    // = 0 si son iguales
+    // > 0 si nombre1 es lexicográficamente mayor (va después)
+    resultado_comparacion = strcmp(nombre1, nombre2);
+
+    printf("\nResultado del ordenamiento alfabético:\n");
+
+    if (resultado_comparacion < 0) {
+        // nombre1 va primero (Javier < Juan)
+        printf("%s, %s\n", nombre1, nombre2);
+    } else if (resultado_comparacion > 0) {
+        // nombre2 va primero (Juan > Javier, entonces se imprime primero Juan)
+        printf("%s, %s\n", nombre2, nombre1);
+    } else {
+        printf("Los nombres son iguales.\n");
+    }
+}
+
+// Puedes llamarlo en tu función main:
+// int main() { ejercicio3_ordenar_dos_nombres(); return 0; }
