@@ -1,30 +1,33 @@
 #include <stdio.h>
 
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+int main() {
+    int N, i;
 
-void ejercicio2_ordenar_dos_numeros() {
-    int A, B;
+    // 1. Solicitar la cantidad de números
+    printf("¿Cuántos números deseas ingresar? ");
+    scanf("%d", &N);
 
-    printf("\n--- Ejercicio 2: Ordenar dos Números ---\n");
-    printf("Ingresa el primer número (A): ");
-    scanf("%d", &A);
-    printf("Ingresa el segundo número (B): ");
-    scanf("%d", &B);
+    int numeros[N]; // Declarar el arreglo con tamaño N
 
-    // 1. Comparación para ordenar de Mayor a Menor (Descendente)
-    // Si A es menor que B, están en el orden incorrecto
-    if (A < B) {
-        // 2. Aplicar el intercambio (swap)
-        swap(&A, &B); 
-        // Nota: Pasamos las direcciones (&) para que la función modifique los valores originales.
+    // 2. Pedir los números al usuario
+    for (i = 0; i < N; i++) {
+        printf("Ingresa el número %d: ", i + 1);
+        scanf("%d", &numeros[i]);
     }
 
-    printf("\nNúmeros ordenados (Mayor a Menor): %d, %d\n", A, B);
+    // 3. Recorrer el arreglo y verificar divisibilidad
+    printf("\nResultados:\n");
+    for (i = 0; i < N; i++) {
+        if (numeros[i] % 2 == 0 && numeros[i] % 3 == 0) {
+            printf("%d es divisible por 2 y por 3.\n", numeros[i]);
+        } else if (numeros[i] % 2 == 0) {
+            printf("%d es divisible por 2.\n", numeros[i]);
+        } else if (numeros[i] % 3 == 0) {
+            printf("%d es divisible por 3.\n", numeros[i]);
+        } else {
+            printf("%d no es divisible ni por 2 ni por 3.\n", numeros[i]);
+        }
+    }
+
+    return 0;
 }
-
-
- int main() { ejercicio2_ordenar_dos_numeros(); return 0; }
