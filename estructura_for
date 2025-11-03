@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    // 1. Inicialización (int i = 1):
+    //    * Se declara la variable 'i' (índice o iterador).
+    //    * Se inicializa 'i' en 1. Esta es la primera acción que ocurre, y SÓLO ocurre una vez.
+    
+    // 2. Condición (i <= 5):
+    //    * Es la condición de prueba. El ciclo continuará ejecutándose MIENTRAS esta condición sea VERDADERA.
+    //    * Cuando 'i' sea mayor que 5, el ciclo se detendrá.
+    
+    // 3. Incremento (i++):
+    //    * Esta acción se ejecuta AL FINAL de cada repetición del ciclo.
+    //    * 'i++' es la forma abreviada de 'i = i + 1'.
+    //    * Significa que 'i' se incrementará en 1 en cada paso, cumpliendo con la necesidad de avanzar "de uno en uno".
+
+    for (int i = 1; i <= 5; i++) { 
+        
+        // El cuerpo del ciclo se ejecuta en cada repetición.
+        // Usamos %d para imprimir el valor actual del contador 'i'.
+        printf("Número de repetición: %d\n", i);
+    }
+    // Este mensaje se imprime una vez que el ciclo ha terminado (es decir, cuando i ya es 6).
+    printf("El ciclo ha terminado de contar.\n"); 
+    return 0;
+}
