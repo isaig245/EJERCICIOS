@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    // Proceso 1: Ejemplo de uso de operador lógico AND (&&)
+
+    int edad = 20;
+    int tieneIdentificacion = 1; // 1 es sí, 0 es no
+    
+    // Condición extra con operador lógico AND (&&)
+    if (edad >= 18 && tieneIdentificacion == 1) {
+        printf("--- Proceso 1 ---\n");
+        printf("Puedes entrar porque eres mayor y traes identificación.\n");
+    } else {
+        printf("--- Proceso 1 ---\n");
+        printf("No puedes entrar (falta ser mayor de edad O falta identificación).\n");
+    }
+
+    printf("\n"); // Línea en blanco para separar procesos
+
+    // Proceso 2: Entrada del usuario con condiciones anidadas
+
+    int edad_alumno = 0;    // Variable para la edad ingresada
+    int tiene_credencial = 0; // Variable para el estado de la credencial
+
+    printf("--- Proceso 2: Entrada a la Universidad ---\n");
+    printf("Por favor, ingresa tu edad: ");
+    
+    // 2. Leer la edad del usuario
+    scanf("%d", &edad_alumno);
+
+    // 3. Evaluar la primera condición: Edad
+    if (edad_alumno >= 18) {
+        printf("Tienes 18 o más. Tienes credencial? Escribe 1 (Sí) o 0 (No): ");
+        
+        // Leer si tiene credencial
+        scanf("%d", &tiene_credencial);
+        
+        // 4. Evaluar la segunda condición: Credencial
+        if (tiene_credencial == 1) { // **CORREGIDO: Usar == para comparación**
+            printf("¡Felicidades! Puedes entrar a la universidad.\n");
+        } else {
+            printf("No cuentas con la credencial, por lo tanto, no puedes entrar.\n");
+        }
+    } else {
+        // **CORREGIDO: Agregado el valor de 18 al mensaje**
+        printf("Lo sentimos, no cumples con la edad mínima de 18 años. No puedes pasar.\n"); 
+    }
+
+    return 0;
+}
